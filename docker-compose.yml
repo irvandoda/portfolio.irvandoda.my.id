@@ -1,0 +1,13 @@
+services:
+  app:
+    build: .
+    container_name: portfolio.irvandoda.my.id_app
+    restart: unless-stopped
+    ports:
+      - "3024:80"
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
